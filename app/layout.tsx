@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Noto_Serif_Bengali } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components";
 
-export const notoSerifBengali = Noto_Serif_Bengali({
-  variable: "--font-noto",
-  subsets: ["bengali"],
+export const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${notoSerifBengali.variable} antialiased`}>
+      <body className={`${roboto.variable} antialiased`}>
         <>
           <NavBar />
         </>
