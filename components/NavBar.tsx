@@ -18,7 +18,7 @@ export default function NavBar() {
       <header
         className={`fixed overflow-clip top-0 left-0 right-0 ${
           menuIsOpen ? "bottom-0" : ""
-        } py-[var(--spacing-10)] px-[var(--spacing-20)] w-full h-auto flex flex-col items-center lg:px-[120px] lg:py-[20px] backdrop-blur-[32px] bg-[rgba(255,255,255,0.2)] lg:border-none border-b border-[var(--colors-black-10)] transition-[bottom,background-color,backdrop-filter] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]`}
+        } py-[var(--spacing-10)] px-[var(--spacing-20)] w-full h-auto flex flex-col items-center lg:px-[120px] lg:py-[10px] backdrop-blur-[32px] bg-[rgba(255,255,255,0.2)] lg:border-none border-b border-[var(--colors-black-10)] transition-[bottom,background-color,backdrop-filter] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]`}
         style={{
           borderColor: "var(--colors-black-10)",
           transition:
@@ -27,7 +27,7 @@ export default function NavBar() {
       >
         <div className="w-full h-auto flex items-center justify-between">
           <Link href="#">
-            <div className="w-[92px] h-auto lg:ml-[5px] lg:w-[171px] md:w-[131px] flex-shrink-0">
+            <div className="w-[92px] h-auto lg:ml-[5px] lg:w-[150px] md:w-[131px] flex-shrink-0">
               <Image
                 alt="mirrro"
                 className="w-full h-full object-cover"
