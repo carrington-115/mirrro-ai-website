@@ -35,11 +35,7 @@ export default function MobileLinks({ isOpen }: mobileLinksTypes) {
           <Button round="corner" className="cursor-pointer">
             Talk to founders
           </Button>
-          <Button
-            variant="outlined"
-            className="cursor-pointer hover:bg-[var(--colors-black-10)]/50"
-            round="corner"
-          >
+          <Button variant="outlined" className="cursor-pointer " round="corner">
             Sign up to updates
           </Button>
         </div>

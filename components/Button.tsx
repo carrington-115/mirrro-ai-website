@@ -10,9 +10,9 @@ const variants = cva(
     variants: {
       variant: {
         filled:
-          "bg-[var(--colors-primary)] text-[var(--base-white)] cursor-pointer hover:bg-[var(--colors-black-50)]",
+          "bg-[var(--colors-black-70)] text-[var(--base-white)] cursor-pointer hover:bg-[var(--colors-black-100)]",
         outlined:
-          "bg-[var(--colors-on-primary)] outline outline-1 outline-[var(--colors-primary)] hover:bg-[var(--colors-black-10)]/50 outline-offset-[-1px] text-[var(--colors-primary)]",
+          "bg-[var(--colors-on-primary)] outline outline-1 outline-[var(--colors-primary)] hover:bg-[var(--colors-black-10)]/15 outline-offset-[-1px] text-[var(--colors-primary)]",
       },
       round: {
         full: "rounded-full",

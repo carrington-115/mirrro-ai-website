@@ -9,7 +9,7 @@ export default function NavLink(props: {
   return (
     <Link
       href={href}
-      className="px-[6px] py-[4px] text-[var(--colors-primary)]/50 text-center font-medium leading-normal text-[16px] no-wrap hover:text-[var(--colors-primary)]"
+      className="px-[6px] py-[4px] text-[var(--colors-black-50)] text-center font-medium leading-normal text-[16px] no-wrap hover:text-[var(--colors-primary)]"
     >
       {children}
     </Link>

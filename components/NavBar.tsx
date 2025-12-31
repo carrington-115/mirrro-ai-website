@@ -18,11 +18,11 @@ export default function NavBar() {
       <header
         className={`fixed overflow-clip top-0 left-0 right-0 ${
           menuIsOpen ? "bottom-0" : ""
-        } py-[var(--spacing-10)] px-[var(--spacing-20)] w-full h-auto flex flex-col items-center lg:px-[120px] lg:py-[10px] backdrop-blur-[32px] bg-[rgba(255,255,255,0.2)] lg:border-none border-b border-[var(--colors-black-10)] transition-[bottom,background-color,backdrop-filter] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]`}
+        } py-[var(--spacing-10)] px-[var(--spacing-20)] w-full h-auto flex flex-col items-center lg:px-[120px] lg:py-[10px] backdrop-blur-[32px] bg-[rgba(255,255,255,0.2)] border-b border-[var(--colors-black-10)] transition-[bottom,background-color,backdrop-filter] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]`}
         style={{
           borderColor: "var(--colors-black-10)",
           transition:
-            "bottom 0.5s cubic-bezier(0.4,0,0.2,1), background-color 1s cubic-bezier(0.4,0,0.2,1), backdrop-filter 0.5s cubic-bezier(0.4,0,0.2,1)", // fallback for inline transition on browsers not fully supporting tailwind's transition utilities
+            "bottom 0.5s cubic-bezier(0.4,0,0.2,1), background-color 1s cubic-bezier(0.4,0,0.2,1), backdrop-filter 0.5s cubic-bezier(0.4,0,0.2,1)",
         }}
       >
         <div className="w-full h-auto flex items-center justify-between">
