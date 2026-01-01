@@ -1,10 +1,11 @@
-import { Hero, Product } from "@/sections";
+import { Communication, Hero, Product } from "@/sections";
 
 export default function Home() {
   return (
-    <div className="container mx-auto mb-[2000px] pt-[100px]">
+    <div className="container mx-auto pt-[100px] pb-[100px]">
       <Hero />
       <Product />
+      <Communication />
     </div>
   );
 }

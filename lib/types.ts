@@ -11,3 +11,8 @@ export interface productLinkTypes {
   title: string;
   description: string;
 }
+
+export interface communicationTypes {
+  icon: string;
+  title: string;
+}
