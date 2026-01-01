@@ -19,6 +19,7 @@
 
   /* black color shades */
   --colors-black-0: oklch(100% 0 none);
+  --colors-black-5: oklch(94.3% 0 none);
   --colors-black-10: oklch(88.5% 0 none);
   --colors-black-15: oklch(82.4% 0.001 13.7);
   --colors-black-20: oklch(76.4% 0.001 14.1);

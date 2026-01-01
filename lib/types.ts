@@ -16,3 +16,9 @@ export interface communicationTypes {
   icon: string;
   title: string;
 }
+
+export interface featureDataProps {
+  icon?: string;
+  title: string;
+  description: string;
+}

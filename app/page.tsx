@@ -1,4 +1,4 @@
-import { Communication, Hero, Product } from "@/sections";
+import { Communication, Features, Hero, Product } from "@/sections";
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <Hero />
       <Product />
       <Communication />
+      <Features />
     </div>
   );
 }
