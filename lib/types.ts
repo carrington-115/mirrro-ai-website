@@ -30,3 +30,13 @@ export interface updatesInputProps {
   inputTitle: string;
   btnSubmitAction: () => void;
 }
+
+type footerLink = {
+  title: string;
+  link: string;
+};
+
+export interface linkGroupTypes {
+  productGroup: footerLink[];
+  legalGroup: footerLink[];
+}
