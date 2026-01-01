@@ -1,9 +1,10 @@
 import { Feature } from "@/components";
 import { featureData } from "@/lib/data";
+import Integrations from "./Integrations";
 
 export default function Features() {
   return (
-    <section className="lg:w-[100%] lg:flex lg:justify-center">
+    <section className="lg:w-[100%] lg:flex lg:flex-col lg:justify-center">
       <div className="mx-auto lg:w-[85%] mt-[var(--spacing-64)] flex flex-col pb-[40px] items-center gap-[var(--spacing-20)] px-[var(--spacing-16)] md:px-[var(--spacing-32)] md:py-[50px] md:bg-[var(--colors-black-5)]/50 lg:pt-[var(--spacing-80)] lg:px-[0px]">
         <h2 className="text-4xl font-bold text-center">
           Better RevOps, More Revenue
@@ -18,6 +19,7 @@ export default function Features() {
           ))}
         </div>
       </div>
+      <Integrations />
     </section>
   );
 }
