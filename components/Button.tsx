@@ -21,6 +21,7 @@ const variants = cva(
       size: {
         normal: "font-medium",
         medium: "text-base",
+        sm: "text-xs",
       },
     },
     defaultVariants: {
@@ -33,17 +34,18 @@ const variants = cva(
 interface ButtonProps {
   variant?: "filled" | "outlined";
   round?: "full" | "corner";
+  size?: "normal" | "medium" | "sm";
 }
 
 export default function Button(
   props: HTMLAttributes<HTMLButtonElement> & ButtonProps
 ) {
-  const { variant, round, className, children, ...rest } = props;
+  const { variant, round, size, className, children, ...rest } = props;
 
   return (
     <button
       {...rest}
-      className={twMerge(variants({ variant, round }), className)}
+      className={twMerge(variants({ variant, round, size }), className)}
     >
       {props.children}
     </button>

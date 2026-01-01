@@ -1,4 +1,4 @@
-import { Communication, Features, Hero, Product } from "@/sections";
+import { Communication, Features, Hero, Product, Updates } from "@/sections";
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <Product />
       <Communication />
       <Features />
+      <Updates />
     </div>
   );
 }

@@ -22,3 +22,11 @@ export interface featureDataProps {
   title: string;
   description: string;
 }
+
+export interface updatesInputProps {
+  inputType: string;
+  placeholder: string;
+  buttonName: string;
+  inputTitle: string;
+  btnSubmitAction: () => void;
+}
