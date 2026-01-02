@@ -22,7 +22,7 @@ const linkGroups: linkGroupTypes = {
 export default function Footer() {
   return (
     <>
-      <footer className="overflow-clip md:-mx-4 sm:-mx-6 flex flex-col md:flex-row md:flex-row-reverse gap-[48px] py-[var(--spacing-64)] px-[var(--spacing-16)] bg-[var(--colors-black-5)] border-t border-[var(--colors-black-15)] lg:hidden">
+      <footer className="overflow-clip md:-mx-4 sm:-mx-6 flex flex-col md:flex-row md:flex-row-reverse gap-[48px] py-[var(--spacing-64)] px-[var(--spacing-16)] bg-[var(--colors-black-5)] md:bg-[var(--base-white)] border-t md:border-none border-[var(--colors-black-15)] lg:hidden">
         <>
           {/* Mobile and Tablet */}
 

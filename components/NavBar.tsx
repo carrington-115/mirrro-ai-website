@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import logoImg from "@/assets/images/light-logo.svg";
 import { Button } from ".";
@@ -13,16 +13,32 @@ import MobileLinks from "./MobileLinks";
 
 export default function NavBar() {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  function handleScroll() {
+    setScrolled(window.scrollY > 100);
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.addEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
+
   return (
     <>
       <header
-        className={`fixed overflow-clip top-0 left-0 right-0 ${
-          menuIsOpen ? "bottom-0" : ""
-        } py-[var(--spacing-10)] px-[var(--spacing-20)] w-full h-auto flex flex-col items-center lg:px-[120px] lg:py-[10px] backdrop-blur-[32px] bg-[rgba(255,255,255,0.2)] border-b border-[var(--colors-black-10)] transition-[bottom,background-color,backdrop-filter] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]`}
+        className={`fixed inset-x-0 top-0 ${
+          menuIsOpen && "bottom-0"
+        } z-50 overflow-clip py-[var(--spacing-10)] px-[var(--spacing-20)] flex flex-col items-center bg-white/20 backdrop-blur-[32px] ${
+          scrolled && "border-b"
+        } lg:px-[120px] lg:py-[10px]`}
         style={{
           borderColor: "var(--colors-black-10)",
           transition:
-            "bottom 0.5s cubic-bezier(0.4,0,0.2,1), background-color 1s cubic-bezier(0.4,0,0.2,1), backdrop-filter 0.5s cubic-bezier(0.4,0,0.2,1)",
+            "background-color 1s cubic-bezier(0.4,0,0.2,1), backdrop-filter 0.5s cubic-bezier(0.4,0,0.2,1), border-bottom-width 0.3s cubic-bezier(0.4,0,0.2,1)",
         }}
       >
         <div className="w-full h-auto flex items-center justify-between">

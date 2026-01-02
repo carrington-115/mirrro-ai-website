@@ -1,10 +1,11 @@
-import { Button } from "@/components";
+import { Button, JoinTeam } from "@/components";
 
 export default function HeroComponent() {
   return (
     <>
-      <section className="container w-full mt-[110px] md:mt-[175px] lg:mt-[170px] px-[var(--spacing-16)] gap-[var(--spacing-20)] lg:gap-[var(--spacing-64)] flex flex-col items-center">
+      <section className="container relative w-full mt-[110px] md:mt-[175px] lg:mt-[170px] px-[var(--spacing-16)] gap-[var(--spacing-20)] lg:gap-[var(--spacing-64)] flex flex-col items-center">
         <div className="flex flex-col items-center">
+          <JoinTeam />
           <h1 className="lg:hidden text-[40px]/[50px] md:text-[55px]/[70px] lg:text-[75px]/[90px]  text-center font-bold">
             Unified AI for all Revenue Operations
           </h1>
