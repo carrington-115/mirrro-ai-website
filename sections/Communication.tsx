@@ -21,7 +21,7 @@ export default function Communication() {
             <ComItem key={channel.title} {...channel} />
           ))}
         </div>
-        <div className="hidden lg:hidden dark:grid grid-cols-2 md:flex md:justify-center md:grid-cols-4 gap-[var(--spacing-20)]">
+        <div className="hidden md:hidden lg:hidden md:hidden dark:grid grid-cols-2 md:flex md:justify-center md:grid-cols-4 gap-[var(--spacing-20)]">
           {communicationChannelsData.dark.map((channel) => (
             <ComItem key={channel.title} {...channel} />
           ))}

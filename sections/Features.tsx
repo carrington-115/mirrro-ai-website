@@ -22,7 +22,7 @@ export default function Features() {
           ))}
         </div>
 
-        <div className="hidden md:hidden lg:hidden md:dark:grid lg:grid md:grid-cols-2 lg:grid-cols-4 gap-x-[var(--spacing-20)] lg:gap-y-0 lg:gap-x-0 gap-y-[var(--spacing-32)] mt-[var(--spacing-32)] lg:mx-auto justify-start">
+        <div className="hidden md:hidden lg:hidden md:dark:grid lg:dark:grid md:grid-cols-2 lg:grid-cols-4 gap-x-[var(--spacing-20)] lg:gap-y-0 lg:gap-x-0 gap-y-[var(--spacing-32)] mt-[var(--spacing-32)] lg:mx-auto justify-start">
           {darkFeatureData.map((feature) => (
             <Feature key={feature.title} {...feature} />
           ))}

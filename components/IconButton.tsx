@@ -6,7 +6,7 @@ export default function IconButton({ icon, color, bgColor }: iconButtonProps) {
     <>
       <button
         className={twMerge(
-          "p-[var(--spacing-10)] rounded-full flex items-center justify-center",
+          "p-[var(--spacing-10)] rounded-full flex items-center justify-center cursor-pointer",
           color,
           bgColor
         )}
