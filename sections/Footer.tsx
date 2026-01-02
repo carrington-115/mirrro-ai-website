@@ -90,7 +90,7 @@ export default function Footer() {
             <Image
               src={lightFooterLogo}
               alt="footer logo"
-              className="w-full h-full hidden"
+              className="w-full h-full dark:hidden"
             />
 
             <Image
