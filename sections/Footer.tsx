@@ -108,7 +108,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex items-start gap-[var(--spacing-20)]">
+        <div className="flex items-start w-[30%] gap-[var(--spacing-20)]">
           <div className="flex flex-col items-start">
             {linkGroups.productGroup.map((productLink) => (
               <NavLink href={productLink.link} key={productLink.title}>
@@ -125,7 +125,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="w-[30%] flex flex-col items-start gap-[6px]">
+        <div className="w-[50%] flex flex-col items-start gap-[6px]">
           <p className="text-base font-normal text-[var(--colors-black-90)]">
             Subscribe for updates
           </p>
