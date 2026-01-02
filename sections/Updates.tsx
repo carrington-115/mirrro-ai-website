@@ -4,7 +4,10 @@ import { UpdatesInput } from "@/components";
 
 export default function Updates() {
   return (
-    <section className="mx-auto mt-[var(--spacing-80)] flex justify-center w-full">
+    <section
+      id="updates"
+      className="mx-auto mt-[var(--spacing-80)] flex justify-center w-full"
+    >
       <div className="flex flex-col items-center gap-[var(--spacing-20)] w-[90%] p-[var(--spacing-20)] lg:w-[60%]">
         <div className="flex flex-col gap-[var(--spacing-20)]">
           <h3 className="text-4xl font-bold text-center">Signup for updates</h3>

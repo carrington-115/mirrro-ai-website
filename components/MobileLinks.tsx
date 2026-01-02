@@ -6,9 +6,13 @@ import { twMerge } from "tailwind-merge";
 
 interface mobileLinksTypes {
   isOpen: boolean;
+  triggerCloseAction: () => void;
 }
 
-export default function MobileLinks({ isOpen }: mobileLinksTypes) {
+export default function MobileLinks({
+  isOpen,
+  triggerCloseAction,
+}: mobileLinksTypes) {
   return (
     <>
       <div
@@ -24,6 +28,7 @@ export default function MobileLinks({ isOpen }: mobileLinksTypes) {
                 <Link
                   href={`#${link.id}`}
                   className="text-4xl text-[var(--colors-primary)]"
+                  onClick={triggerCloseAction}
                 >
                   {link.label}
                 </Link>
@@ -32,7 +37,7 @@ export default function MobileLinks({ isOpen }: mobileLinksTypes) {
           </ul>
         </nav>
         <div className="flex w-full items-center justify-between">
-          <Button round="corner" className="cursor-pointer">
+          <Button round="corner" className="cursor-pointer" variant="filled">
             Talk to founders
           </Button>
           <Button variant="outlined" className="cursor-pointer " round="corner">

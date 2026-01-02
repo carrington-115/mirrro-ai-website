@@ -55,7 +55,10 @@ export default function NavBar() {
             action={() => setMenuIsOpen(!menuIsOpen)}
           />
         </div>
-        <MobileLinks isOpen={menuIsOpen} />
+        <MobileLinks
+          isOpen={menuIsOpen}
+          triggerCloseAction={() => setMenuIsOpen(false)}
+        />
       </header>
     </>
   );

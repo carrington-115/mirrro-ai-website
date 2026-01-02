@@ -5,7 +5,10 @@ import { productData } from "@/lib/data";
 export default function Product() {
   return (
     <>
-      <section className="mx-auto overflow-x-clip lg:mx-auto w-[100%] flex flex-col items-center mt-[var(--spacing-120)] mx-[var(--spacing-16)] lg:px-[var(--spacing-120)] md:px-[var(--spacing-20)]">
+      <section
+        id="product"
+        className="mx-auto overflow-x-clip lg:mx-auto w-[100%] flex flex-col items-center mt-[var(--spacing-120)] mx-[var(--spacing-16)] lg:px-[var(--spacing-120)] md:px-[var(--spacing-20)]"
+      >
         <div className="w-fit lg:w-[60%] flex flex-col justify-center px-[var(--spacing-20)]">
           <h2 className="text-center text-[36px] lg:text-[48px] font-bold">
             What's in Mirrro?
