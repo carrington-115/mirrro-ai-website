@@ -43,11 +43,11 @@ export default function Feature({
       <div className="hidden md:flex lg:flex flex-col items-start justify-start h-[180px] md:h-[200px] gap-[var(--spacing-10)] px-[24px] py-[30px] lg:px-[25px] lg:py-[45px] lg:min-h-[300px]">
         <div className="flex flex-col items-start">
           <div>{icon && <Image src={icon} alt={title} />}</div>
-          <h3 className="text-2xl font-bold text-[var(--colors-black-100)]">
+          <h3 className="text-2xl font-bold text-[var(--colors-black-100)] dark:text-[var(--colors-black-10)]">
             {title}
           </h3>
         </div>
-        <p className="text-lg font-normal text-[var(--colors-black-50)]">
+        <p className="text-lg font-normal text-[var(--colors-black-50)] dark:text-[var(--colors-black-30)]">
           {description}
         </p>
       </div>

@@ -13,7 +13,7 @@ export default function Product() {
           <h2 className="text-center text-[36px] lg:text-[48px] font-bold">
             What's in Mirrro?
           </h2>
-          <p className="text-center font-medium lg:text-base text-[var(--colors-black-50)]">
+          <p className="text-center font-normal lg:text-base text-[var(--colors-black-50)] dark:text-[var(--colors-black-20)]">
             No more dropped context, no more silos, just seamless workflows and
             consistent customer experiences that drive predictable growth
           </p>

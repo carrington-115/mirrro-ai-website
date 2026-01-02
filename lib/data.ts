@@ -1,6 +1,7 @@
 import {
   communicationTypes,
   featureDataProps,
+  linkGroupTypes,
   NavLinkType,
   productLinkTypes,
 } from "./types";
@@ -14,7 +15,15 @@ import messageIcon from "@/assets/icons/message.svg";
 import smsIcon from "@/assets/icons/sms.svg";
 import phoneIcon from "@/assets/icons/phone.svg";
 
+// communication icons for dark mode
+import darkEmailIcon from "@/assets/icons/email-dark.svg";
+import darkMessageIcon from "@/assets/icons/chats-dark.svg";
+import darkSmsIcon from "@/assets/icons/sms-dark.svg";
+import darkPhoneIcon from "@/assets/icons/phone-dark.svg";
+
 // revenue icons
+
+// light
 import memoryImage from "@/assets/icons/memory.svg";
 import agentImage from "@/assets/icons/superagent.svg";
 import workflowImage from "@/assets/icons/workflow.svg";
@@ -23,6 +32,16 @@ import experimentationImage from "@/assets/icons/testing.svg";
 import multichannelImage from "@/assets/icons/multichannel.svg";
 import multiuserImage from "@/assets/icons/multiusers.svg";
 import marketplaceImage from "@/assets/icons/store.svg";
+
+// dark
+import darkmemoryImage from "@/assets/icons/memory-dark.svg";
+import darkagentImage from "@/assets/icons/superagent-dark.svg";
+import darkworkflowImage from "@/assets/icons/workflow-dark.svg";
+import darkmonitoringImage from "@/assets/icons/workflow-dark.svg";
+import darkexperimentationImage from "@/assets/icons/testing-dark.svg";
+import darkmultichannelImage from "@/assets/icons/multichannel-dark.svg";
+import darkmultiuserImage from "@/assets/icons/multiusers-dark.svg";
+import darkmarketplaceImage from "@/assets/icons/store-dark.svg";
 
 export const navLinks: NavLinkType[] = [
   { label: "Product", id: "product" },
@@ -56,12 +75,20 @@ export const productData: productLinkTypes[] = [
   },
 ];
 
-export const communicationChannelsData: communicationTypes[] = [
-  { icon: phoneIcon, title: "AI-powered Phone calls" },
-  { icon: messageIcon, title: "AI-powered Chats" },
-  { icon: smsIcon, title: "AI-powered Sms" },
-  { icon: emailIcon, title: "AI-powered Emails" },
-];
+export const communicationChannelsData: communicationTypes = {
+  light: [
+    { icon: phoneIcon, title: "AI-powered Phone calls" },
+    { icon: messageIcon, title: "AI-powered Chats" },
+    { icon: smsIcon, title: "AI-powered Sms" },
+    { icon: emailIcon, title: "AI-powered Emails" },
+  ],
+  dark: [
+    { icon: darkPhoneIcon, title: "AI-powered Phone calls" },
+    { icon: darkMessageIcon, title: "AI-powered Chats" },
+    { icon: darkSmsIcon, title: "AI-powered Sms" },
+    { icon: darkEmailIcon, title: "AI-powered Emails" },
+  ],
+};
 
 export const featureData: featureDataProps[] = [
   {
@@ -114,3 +141,70 @@ export const featureData: featureDataProps[] = [
       "The Workflow Marketplace offers pre-built, shareable templates to jumpstart RevOps automation",
   },
 ];
+
+export const darkFeatureData: featureDataProps[] = [
+  {
+    icon: darkmemoryImage,
+    title: "One memory",
+    description:
+      "One Memory provides every agent with a single, unified view of all customer interactions",
+  },
+  {
+    icon: darkagentImage,
+    title: "Superagent",
+    description:
+      "The Super Agent acts as the central supervisor, orchestrating sales, support, and marketing agents",
+  },
+  {
+    icon: darkworkflowImage,
+    title: "Workflows",
+    description:
+      "No-code drag-and-drop builder for custom processes — fast RevOps alignment and scalable automation without developers.",
+  },
+  {
+    icon: darkmonitoringImage,
+    title: "Monitoring",
+    description:
+      "Realtime Monitoring delivers full visibility into agent actions and performance",
+  },
+
+  {
+    icon: darkexperimentationImage,
+    title: "Testing and simulations",
+    description:
+      "A/B Testing and Simulations let you safely test agent variants and workflows, refining performance with data-driven insights before deployment.",
+  },
+  {
+    icon: darkmultichannelImage,
+    title: "Multichannel support",
+    description:
+      "Multichannel Support unifies automated calls, SMS, chats (WhatsApp, Telegram, Messenger), and email",
+  },
+  {
+    icon: darkmultiuserImage,
+    title: "Multi-user support",
+    description:
+      "Multi-User Support enables realtime collaboration with role-based access",
+  },
+  {
+    icon: darkmarketplaceImage,
+    title: "Workflow marketplace",
+    description:
+      "The Workflow Marketplace offers pre-built, shareable templates to jumpstart RevOps automation",
+  },
+];
+
+export const linkGroups: linkGroupTypes = {
+  productGroup: [
+    { title: "Product", link: "#product" },
+    { title: "Features", link: "#features" },
+    { title: "Integrations", link: "#integrations" },
+    { title: "Use cases", link: "#use-cases" },
+  ],
+  legalGroup: [
+    { title: "Terms and conditions", link: "" },
+    { title: "Privacy policy", link: "" },
+    { title: "FAQs", link: "" },
+    { title: "Blog", link: "" },
+  ],
+};

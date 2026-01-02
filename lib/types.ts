@@ -13,9 +13,14 @@ export interface productLinkTypes {
   description: string;
 }
 
-export interface communicationTypes {
+export interface simpleComType {
   icon: string;
   title: string;
+}
+
+export interface communicationTypes {
+  light: simpleComType[];
+  dark: simpleComType[];
 }
 
 export interface featureDataProps {

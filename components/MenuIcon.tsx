@@ -8,9 +8,9 @@ export default function MenuIcon({ isOpen, action }: menuIconProps) {
       className="flex items-center justify-center w-[40px] h-[40px] lg:hidden cursor-pointer"
     >
       {isOpen ? (
-        <X size={24} className="text-black" />
+        <X size={24} className="text-black dark:text-white" />
       ) : (
-        <Menu size={24} className="text-black" />
+        <Menu size={24} className="text-black dark:text-white" />
       )}
     </button>
   );

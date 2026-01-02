@@ -23,7 +23,7 @@ export default function MobileLinks({
               <li className="list-none" key={link.id}>
                 <Link
                   href={`#${link.id}`}
-                  className="text-4xl text-[var(--colors-primary)]"
+                  className="text-4xl text-[var(--colors-primary)] dark:text-[var(--colors-black-5)]"
                   onClick={triggerCloseAction}
                 >
                   {link.label}

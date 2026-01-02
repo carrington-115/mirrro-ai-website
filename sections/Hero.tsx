@@ -13,7 +13,7 @@ export default function HeroComponent() {
             Unified AI for all Revenue <br />
             Operations
           </h1>
-          <p className="text-center text-[17px] md:w-[85%] lg:w-[80%] mt-[var(--spacing-6)] lg:text-[23px]/[35px] text-[var(--colors-black-40)]">
+          <p className="text-center text-[17px] md:w-[85%] lg:w-[80%] mt-[var(--spacing-6)] lg:text-[23px]/[35px] text-[var(--colors-black-40)] dark:text-[var(--colors-black-20)]">
             mirrro gives your teams one unified <strong>superagent</strong> with{" "}
             <strong>full memory</strong>, <strong>realtime visibility</strong>,
             and <strong>total control</strong> so every interaction feels

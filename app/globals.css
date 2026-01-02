@@ -75,7 +75,7 @@
   :root {
     /* To to be updated lated*/
     /* */
-    --background: var(--surface-black);
+    --background: var(--colors-black-90);
     --foreground: var(--base-white);
 
     /* Custom Styles */

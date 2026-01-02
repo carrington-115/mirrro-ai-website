@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 import logoImg from "@/assets/images/light-logo.svg";
+import darkLogoImg from "@/assets/images/Dark mode.svg";
 import { Button } from ".";
 import NavLink from "./NavLink";
 import MenuIcon from "./MenuIcon";
@@ -32,11 +33,14 @@ export default function NavBar() {
       <header
         className={`fixed inset-x-0 top-0 ${
           menuIsOpen && "bottom-0"
-        } z-50 overflow-clip py-[var(--spacing-10)] px-[var(--spacing-20)] flex flex-col items-center bg-white/20 backdrop-blur-[32px] ${
-          scrolled && "border-b"
+        } z-50 overflow-clip py-[var(--spacing-10)] px-[var(--spacing-20)] flex flex-col items-center ${
+          (scrolled && "bg-white/20 dark:bg-black/20 backdrop-blur-[32px]") ||
+          (menuIsOpen && "bg-white/20 dark:bg-black/20 backdrop-blur-[32px]")
+        } ${
+          scrolled &&
+          "border-b border-[var(--colors-black-10)] dark:border-[dark:var(--colors-black-70)]"
         } lg:px-[120px] lg:py-[10px]`}
         style={{
-          borderColor: "var(--colors-black-10)",
           transition:
             "background-color 1s cubic-bezier(0.4,0,0.2,1), backdrop-filter 0.5s cubic-bezier(0.4,0,0.2,1), border-bottom-width 0.3s cubic-bezier(0.4,0,0.2,1)",
         }}
@@ -46,8 +50,14 @@ export default function NavBar() {
             <div className="w-[92px] h-auto lg:ml-[5px] lg:w-[150px] md:w-[131px] flex-shrink-0">
               <Image
                 alt="mirrro"
-                className="w-full h-full object-cover"
+                className="dark:hidden w-full h-full object-cover"
                 src={logoImg}
+              />
+
+              <Image
+                alt="mirrro"
+                className="hidden dark:block w-full h-full object-cover"
+                src={darkLogoImg}
               />
             </div>
           </Link>

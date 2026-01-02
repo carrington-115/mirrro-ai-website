@@ -10,8 +10,10 @@ export default function Updates() {
     >
       <div className="flex flex-col items-center gap-[var(--spacing-20)] w-[90%] p-[var(--spacing-20)] lg:w-[60%]">
         <div className="flex flex-col gap-[var(--spacing-20)]">
-          <h3 className="text-4xl font-bold text-center">Signup for updates</h3>
-          <p className="text-lg font-normal text-center text-[var(--colors-black-70)]">
+          <h3 className="text-4xl font-bold text-center dark:text-[var(--colors-black-0)]">
+            Signup for updates
+          </h3>
+          <p className="text-lg font-normal text-center text-[var(--colors-black-70)] dark:text-[var(--colors-black-5)]">
             mirrro ends RevOps chaos with one shared superagent brain — giving
             sales, support, and marketing consistent memory, realtime
             visibility, and seamless alignment across every customer touchpoint.
