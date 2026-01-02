@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { HTMLAttributes } from "react";
 
 export interface NavLinkType {
   label: string;
@@ -39,4 +40,26 @@ type footerLink = {
 export interface linkGroupTypes {
   productGroup: footerLink[];
   legalGroup: footerLink[];
+}
+
+export interface mobileLinksTypes {
+  isOpen: boolean;
+  triggerCloseAction: () => void;
+}
+
+export interface buttonProps extends HTMLAttributes<HTMLButtonElement> {
+  variant?: "filled" | "outlined";
+  round?: "full" | "corner";
+  size?: "normal" | "medium" | "sm";
+}
+
+export interface iconButtonProps {
+  icon: React.ReactNode;
+  color: string;
+  bgColor: string;
+}
+
+export interface menuIconProps {
+  isOpen: boolean;
+  action: () => void;
 }

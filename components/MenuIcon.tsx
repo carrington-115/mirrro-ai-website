@@ -1,11 +1,7 @@
 import { Menu, X } from "lucide-react";
+import { menuIconProps } from "@/lib/types";
 
-interface MenuIconProps {
-  isOpen: boolean;
-  action: () => void;
-}
-
-export default function MenuIcon({ isOpen, action }: MenuIconProps) {
+export default function MenuIcon({ isOpen, action }: menuIconProps) {
   return (
     <button
       onClick={action}

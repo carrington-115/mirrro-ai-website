@@ -1,10 +1,5 @@
 import { twMerge } from "tailwind-merge";
-
-interface iconButtonProps {
-  icon: React.ReactNode;
-  color: string;
-  bgColor: string;
-}
+import { iconButtonProps } from "@/lib/types";
 
 export default function IconButton({ icon, color, bgColor }: iconButtonProps) {
   return (

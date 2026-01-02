@@ -3,11 +3,7 @@ import Link from "next/link";
 import { navLinks } from "@/lib/data";
 import { Button } from ".";
 import { twMerge } from "tailwind-merge";
-
-interface mobileLinksTypes {
-  isOpen: boolean;
-  triggerCloseAction: () => void;
-}
+import { mobileLinksTypes } from "@/lib/types";
 
 export default function MobileLinks({
   isOpen,
