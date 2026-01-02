@@ -5,9 +5,16 @@ import {
   NavLinkType,
   productLinkTypes,
 } from "./types";
+
+// product images
 import superagentImage from "@/assets/images/superagent.png";
 import onememoryImage from "@/assets/images/one-memory.png";
 import automationImage from "@/assets/images/automation.png";
+
+// product dark mode images
+import darksuperagentImage from "@/assets/images/superagent-dark.png";
+import darkonememoryImage from "@/assets/images/onememory-dark.png";
+import darkautomationImage from "@/assets/images/workflow-dark.png";
 
 // communication icons
 import emailIcon from "@/assets/icons/email.svg";
@@ -68,6 +75,30 @@ export const productData: productLinkTypes[] = [
   },
   {
     image: automationImage,
+    productLink: "#",
+    title: "Automation",
+    description:
+      "AI-driven routing, personalization, and actions to eliminate silos, boost efficiency, and scale revenue.",
+  },
+];
+
+export const productDarkModeData: productLinkTypes[] = [
+  {
+    image: darksuperagentImage,
+    productLink: "#",
+    title: "Superagent",
+    description:
+      "Central supervisor with shared memory across sales, marketing, and support for seamless, consistent RevOps workflows.",
+  },
+  {
+    image: darkonememoryImage,
+    productLink: "#",
+    title: "One memory",
+    description:
+      "Ensure every interaction, data point, and action is instantly accessible to sales, support, and marketing agents",
+  },
+  {
+    image: darkautomationImage,
     productLink: "#",
     title: "Automation",
     description:

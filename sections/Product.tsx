@@ -1,6 +1,6 @@
 import { ProductItem } from "@/components";
 import superagent from "@/assets/images/superagent.png";
-import { productData } from "@/lib/data";
+import { productDarkModeData, productData } from "@/lib/data";
 
 export default function Product() {
   return (
@@ -18,8 +18,19 @@ export default function Product() {
             consistent customer experiences that drive predictable growth
           </p>
         </div>
-        <div className="flex flex-col md:grid md:grid-cols-3 items-center justify-center gap-[20px] md:gap-16 mt-[var(--spacing-64)]">
+        <div className="flex flex-col dark:hidden md:grid md:grid-cols-3 items-center justify-center gap-[20px] md:gap-16 mt-[var(--spacing-64)]">
           {productData.map((product) => (
+            <ProductItem
+              key={product.title}
+              productLink={product.productLink}
+              image={product.image}
+              title={product.title}
+              description={product.description}
+            />
+          ))}
+        </div>
+        <div className="hidden dark:flex flex-col md:grid md:dark:grid md:grid-cols-3 items-center justify-center gap-[20px] md:gap-16 mt-[var(--spacing-64)]">
+          {productDarkModeData.map((product) => (
             <ProductItem
               key={product.title}
               productLink={product.productLink}
