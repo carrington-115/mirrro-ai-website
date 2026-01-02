@@ -29,7 +29,7 @@ export default function Product() {
             />
           ))}
         </div>
-        <div className="hidden md:hidden lg:hidden sm:dark:flex flex-col md:grid md:dark:grid md:grid-cols-3 items-center justify-center gap-[20px] md:gap-16 mt-[var(--spacing-64)]">
+        <div className="hidden md:hidden lg:hidden dark:flex flex-col md:grid md:dark:grid md:grid-cols-3 items-center justify-center gap-[20px] md:gap-16 mt-[var(--spacing-64)]">
           {productDarkModeData.map((product) => (
             <ProductItem
               key={product.title}
