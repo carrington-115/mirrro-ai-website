@@ -8,7 +8,7 @@ export default function Badge(
   return (
     <span
       className={twMerge(
-        `px-[8px] py-[1px] rounded-full flex-inline justify-center align-center`,
+        `px-[8px] py-[1px] text-xs md:text-sm rounded-full flex-inline justify-center align-center`,
         color && `bg-${color}`,
         className
       )}
