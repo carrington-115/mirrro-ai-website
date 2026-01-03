@@ -5,6 +5,11 @@ import lightFooterLogo from "@/assets/images/light-logo.svg";
 import darkFooterLogo from "@/assets/images/Dark mode.svg";
 import { linkGroups } from "@/lib/data";
 
+const usefulLinks = {
+  privacyPolicy:
+    "https://www.notion.so/Privacy-Policy-e68c3aff1f7c4462adb467843c267548?source=copy_link",
+};
+
 export default function Footer() {
   return (
     <>

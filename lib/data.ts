@@ -225,6 +225,14 @@ export const darkFeatureData: featureDataProps[] = [
   },
 ];
 
+const usefulLinks = {
+  privacyPolicy:
+    "https://www.notion.so/Mirrroverse-Privacy-Policy-05cef81cb4c944a5ab6cb13d034dd873?source=copy_link",
+  termsAndConditions:
+    "https://www.notion.so/Mirrroverse-Privacy-Policy-05cef81cb4c944a5ab6cb13d034dd873?source=copy_link",
+  FAQs: "https://www.notion.so/Mirrroverse-FAQs-44ed9409b5e9476083770892be44bbeb?source=copy_link",
+};
+
 export const linkGroups: linkGroupTypes = {
   productGroup: [
     { title: "Product", link: "#product" },
@@ -233,9 +241,9 @@ export const linkGroups: linkGroupTypes = {
     { title: "Use cases", link: "#use-cases" },
   ],
   legalGroup: [
-    { title: "Terms and conditions", link: "" },
-    { title: "Privacy policy", link: "" },
-    { title: "FAQs", link: "" },
-    { title: "Blog", link: "" },
+    { title: "Terms and conditions", link: usefulLinks.privacyPolicy },
+    { title: "Privacy policy", link: usefulLinks.privacyPolicy },
+    { title: "FAQs", link: usefulLinks.FAQs },
+    { title: "Blog", link: "#" },
   ],
 };
