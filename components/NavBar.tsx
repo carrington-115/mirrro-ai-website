@@ -34,11 +34,16 @@ export default function NavBar() {
         className={`fixed inset-x-0 top-0 ${
           menuIsOpen && "bottom-0"
         } z-50 overflow-clip py-[var(--spacing-10)] px-[var(--spacing-20)] flex flex-col items-center ${
-          (scrolled && "bg-white/20 dark:bg-black/20 backdrop-blur-[32px]") ||
-          (menuIsOpen && "bg-white/20 dark:bg-black/20 backdrop-blur-[32px]")
+          (scrolled
+            ? "bg-white/20 dark:bg-black/20 backdrop-blur-[32px]"
+            : "") ||
+          (menuIsOpen
+            ? "bg-white/20 dark:bg-black/20 backdrop-blur-[32px]"
+            : "")
         } ${
-          scrolled &&
-          "border-b border-[var(--colors-black-10)] dark:border-[dark:var(--colors-black-70)]"
+          scrolled
+            ? "border-b border-[var(--colors-black-10)] dark:border-[dark:var(--colors-black-70)]"
+            : ""
         } lg:px-[120px] lg:py-[10px]`}
         style={{
           transition:

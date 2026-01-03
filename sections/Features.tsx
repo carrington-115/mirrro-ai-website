@@ -12,17 +12,17 @@ export default function Features() {
         <h2 className="text-4xl font-bold text-center">
           Better RevOps, More Revenue
         </h2>
-        <div className="lg:hidden md:hidden">
+        {/* <div className="lg:hidden md:hidden">
           <Feature {...featureData[0]} />
-        </div>
+        </div> */}
 
-        <div className="hidden dark:hidden md:grid lg:grid md:grid-cols-2 lg:grid-cols-4 gap-x-[var(--spacing-20)] lg:gap-y-0 lg:gap-x-0 gap-y-[var(--spacing-32)] mt-[var(--spacing-32)] lg:mx-auto justify-start">
+        <div className="grid grid-cols-1 dark:hidden md:grid lg:grid md:grid-cols-2 lg:grid-cols-4 gap-x-[var(--spacing-20)] lg:gap-y-0 lg:gap-x-0 gap-y-[var(--spacing-32)] mt-[var(--spacing-32)] lg:mx-auto justify-start">
           {featureData.map((feature) => (
             <Feature key={feature.title} {...feature} />
           ))}
         </div>
 
-        <div className="hidden md:hidden lg:hidden md:dark:grid lg:dark:grid md:grid-cols-2 lg:grid-cols-4 gap-x-[var(--spacing-20)] lg:gap-y-0 lg:gap-x-0 gap-y-[var(--spacing-32)] mt-[var(--spacing-32)] lg:mx-auto justify-start">
+        <div className="hidden md:hidden lg:hidden dark:grid sm:dark:grid-cols-1 md:dark:grid lg:dark:grid md:dark:grid-cols-2 lg:dark:grid-cols-4 gap-x-[var(--spacing-20)] lg:gap-y-0 lg:gap-x-0 gap-y-[var(--spacing-32)] mt-[var(--spacing-32)] lg:mx-auto justify-start">
           {darkFeatureData.map((feature) => (
             <Feature key={feature.title} {...feature} />
           ))}
