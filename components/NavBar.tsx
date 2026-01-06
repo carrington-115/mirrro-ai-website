@@ -46,8 +46,7 @@ export default function NavBar() {
             : ""
         } lg:px-[120px] lg:py-[10px]`}
         style={{
-          transition:
-            "background-color 1s cubic-bezier(0.4,0,0.2,1), backdrop-filter 0.5s cubic-bezier(0.4,0,0.2,1), border-bottom-width 0.3s cubic-bezier(0.4,0,0.2,1)",
+          transition: "background-color 1s cubic-bezier(0.4,0,0.2,1)",
         }}
       >
         <div className="w-full h-auto flex items-center justify-between">

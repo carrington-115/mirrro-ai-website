@@ -20,7 +20,7 @@ export default function HeroComponent() {
             consistent and human.
           </p>
         </div>
-        <div className="w-full flex items-center justify-center gap-[var(--spacing-20)] lg:gap-[var(--spacing-64)]">
+        <div className="w-full flex flex-wrap items-center justify-center gap-[var(--spacing-20)] lg:gap-[var(--spacing-64)]">
           <Button variant="filled" round="corner">
             Talk to founders
           </Button>

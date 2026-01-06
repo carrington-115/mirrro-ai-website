@@ -16,6 +16,9 @@ export default function MobileLinks({
           "bottom-0 left-0 right-0 top-[8%] mt-[var(--spacing-20)] w-full h-[100%] gap-[40%] hidden flex-col lg:hidden",
           isOpen && "flex"
         )}
+        style={{
+          transition: "height 1s cubic-bezier(0.4,0,0.2,1)",
+        }}
       >
         <nav className="flex">
           <ul className="flex flex-col gap-[5px]">
@@ -32,7 +35,7 @@ export default function MobileLinks({
             ))}
           </ul>
         </nav>
-        <div className="flex w-full items-center justify-between">
+        <div className="flex flex-wrap gap-5 w-full items-center justify-between">
           <Button round="corner" className="cursor-pointer" variant="filled">
             Talk to founders
           </Button>
