@@ -20,7 +20,7 @@ export default function Features() {
             layout="vertical"
             containerClassName="bg-[#eef2ff] border-[#c7d2fe] lg:w-[45%] h-auto"
             imageContainerClassName="w-full border-transparent border-0 bg-transparent flex justify-center items-center p-0 !border-none"
-            imageClassName="lg:w-full w-[90%] h-auto object-contain"
+            imageClassName="lg:w-full w-full h-auto object-contain"
           />
 
           {/* Team organization and management */}
