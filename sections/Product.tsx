@@ -1,7 +1,7 @@
-import { FeatureCard } from "@/components";
-import superagent from "@/assets/images/superagent.png";
-import automation from "@/assets/images/automation.png";
-import onememory from "@/assets/images/one-memory.png";
+import FeatureCard from "@/components/FeatureCard";
+import mirrropilotProduct from "@/assets/images/mirropiliot-product.png";
+import workflowProduct from "@/assets/images/automations-product.png";
+import memoryProduct from "@/assets/images/shared-memory-product.png";
 
 export default function Product() {
   return (
@@ -17,22 +17,20 @@ export default function Product() {
         </div>
 
         <div className="w-full flex flex-col gap-[16px] mt-[var(--spacing-64)] max-w-[1188px]">
-          {/* Mirrropilot - Horizontal */}
           <FeatureCard
             title="Mirrropilot"
             description="Your AI teammate that thinks, chats, and acts across every channel."
-            imageSrc={superagent}
+            imageSrc={mirrropilotProduct}
             layout="horizontal"
             containerClassName="bg-[#faf5ff] border-[#e9d5ff]"
             imageContainerClassName="border-[#ede9fe]"
           />
 
-          {/* Bottom Two Cards - Vertical split */}
           <div className="flex flex-col lg:flex-row gap-[16px] w-full">
             <FeatureCard
               title="No-code flows"
               description="Build powerful automations with drag-and-drop — no developers required."
-              imageSrc={automation}
+              imageSrc={workflowProduct}
               layout="vertical"
               containerClassName="bg-[#fff7ed] border-[#fed7aa] lg:w-[60%] h-auto"
               imageContainerClassName="border-[#ffedd5]"
@@ -41,7 +39,7 @@ export default function Product() {
             <FeatureCard
               title="Shared memory"
               description="Every agent remembers everything — no more dropped context, ever."
-              imageSrc={onememory}
+              imageSrc={memoryProduct}
               layout="vertical"
               containerClassName="bg-[#fffbeb] border-[#fde68a] lg:w-[40%] h-auto"
               imageContainerClassName="border-[#fef9c3]"

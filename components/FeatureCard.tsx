@@ -50,9 +50,9 @@ export default function FeatureCard({
       </div>
       <div
         className={cn(
-          "border-[3px] border-solid rounded-[24px] relative overflow-hidden flex-shrink-0",
+          "border-[3px] border-solid rounded-[24px] relative overflow-clip flex-shrink-0",
           isHorizontal
-            ? "w-full lg:w-full lg:h-[330px]"
+            ? "w-full lg:w-full lg:h-[300px]"
             : "w-full aspect-[1127/566]",
           imageContainerClassName,
         )}
