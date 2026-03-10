@@ -49,7 +49,7 @@ export default function FAQ() {
       id="faq"
       className="mx-auto mt-[var(--spacing-160)] flex flex-col lg:flex-row w-full px-[var(--spacing-16)] lg:px-[var(--spacing-120)] gap-[var(--spacing-64)] lg:gap-[var(--spacing-120)] max-w-[1440px] items-start"
     >
-      <div className="flex flex-col gap-[var(--spacing-20)] lg:gap-[var(--spacing-12)] w-full lg:w-[50%] sticky top-[var(--spacing-32)]">
+      <div className="flex flex-col gap-[var(--spacing-20)] lg:gap-[var(--spacing-12)] w-full lg:w-[50%]">
         <h2 className="font-semibold text-3xl lg:text-[var(--heading-2-font-size)]/[var(--heading-2-line-height)] leading-[48px] tracking-[-1px] text-[var(--general-secondary-foreground,#171717)] lg:w-full lg:max-w-full max-w-[300px]">
           Frequently Asked Questions
         </h2>
