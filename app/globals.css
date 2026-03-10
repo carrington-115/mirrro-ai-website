@@ -77,6 +77,7 @@
 
   /* surface accents */
   --accent-0: oklch(98.5% 0 none);
+  --accent: #f5f5f5;
   --accent-2: oklch(92.2% 0 none);
   --accent-3: oklch(87% 0 none);
 

@@ -12,8 +12,8 @@ export default function Home() {
     <div className="container mx-auto">
       <Hero />
       <Product />
-      {/* <Communication />
-      <Features />
+      <Communication />
+      {/* <Features />
       <Updates />
       <Footer /> */}
     </div>
