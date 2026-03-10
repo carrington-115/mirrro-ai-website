@@ -1,5 +1,5 @@
 import { updatesInputProps } from "@/lib/types";
-import Button from "./Button";
+import { Button } from "./ui/button";
 
 export default function UpdatesInput({
   inputType,
@@ -20,14 +20,14 @@ export default function UpdatesInput({
         <Button
           className="w-[50%] md:hidden lg:hidden"
           size="sm"
-          variant="filled"
+          variant="default"
           onClick={btnSubmitAction}
         >
           {buttonName}
         </Button>
         <Button
           className="hidden md:block lg:block md:w-[50%] lg:w-[40%] hidden"
-          variant="filled"
+          variant="default"
           onClick={btnSubmitAction}
         >
           {buttonName}

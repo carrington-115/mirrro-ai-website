@@ -1,17 +1,19 @@
 import NavBar from "./NavBar";
-import Button from "./Button";
 import ProductItem from "./ProductItem";
+import FeatureCard from "./FeatureCard";
 import ComItem from "./CommunicationComponent";
 import Feature from "./FeaturesComponent";
 import UpdatesInput from "./UpdatesInput";
-import JoinTeam from "./JoinTeam";
+import AlternatingFeature from "./AlternatingFeature";
+import IllustrationStepComponent from "./IllustrationStepComponent";
 
 export {
   NavBar,
-  Button,
   ProductItem,
   ComItem,
   Feature,
   UpdatesInput,
-  JoinTeam,
+  FeatureCard,
+  AlternatingFeature,
+  IllustrationStepComponent,
 };

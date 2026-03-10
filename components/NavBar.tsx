@@ -5,12 +5,11 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 import logoImg from "@/assets/images/light-logo.svg";
-import darkLogoImg from "@/assets/images/Dark mode.svg";
-import { Button } from ".";
 import NavLink from "./NavLink";
 import MenuIcon from "./MenuIcon";
 import { navLinks } from "@/lib/data";
 import MobileLinks from "./MobileLinks";
+import { Button } from "./ui/button";
 
 export default function NavBar() {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
@@ -34,34 +33,18 @@ export default function NavBar() {
         className={`fixed inset-x-0 top-0 ${
           menuIsOpen && "bottom-0"
         } z-50 overflow-clip py-[var(--spacing-10)] px-[var(--spacing-20)] flex flex-col items-center ${
-          (scrolled
-            ? "bg-white/20 dark:bg-black/20 backdrop-blur-[32px]"
-            : "") ||
-          (menuIsOpen
-            ? "bg-white/20 dark:bg-black/20 backdrop-blur-[32px]"
-            : "")
+          (scrolled ? "bg-white" : "") || (menuIsOpen ? "bg-white" : "")
         } ${
-          scrolled
-            ? "border-b border-[var(--colors-black-10)] dark:border-[dark:var(--colors-black-70)]"
-            : ""
+          scrolled ? "border-b border-[var(--colors-black-10)]" : ""
         } lg:px-[120px] lg:py-[10px]`}
-        style={{
-          transition: "background-color 1s cubic-bezier(0.4,0,0.2,1)",
-        }}
       >
         <div className="w-full h-auto flex items-center justify-between">
           <Link href="#">
-            <div className="w-[92px] h-auto lg:ml-[5px] lg:w-[150px] md:w-[131px] flex-shrink-0">
+            <div className="w-[92px] h-auto lg:ml-[5px] lg:w-[120px] md:w-[131px] flex-shrink-0">
               <Image
                 alt="mirrro"
                 className="dark:hidden w-full h-full object-cover"
                 src={logoImg}
-              />
-
-              <Image
-                alt="mirrro"
-                className="hidden dark:block w-full h-full object-cover"
-                src={darkLogoImg}
               />
             </div>
           </Link>
@@ -75,8 +58,11 @@ export default function NavBar() {
               ))}
             </ul>
           </nav>
-          <Button variant="filled" className="mr-[12px] hidden lg:block">
-            Talk to founders
+          <Button
+            variant="default"
+            className="mr-[12px] hidden lg:inline-flex rounded-full h-[36px] px-[16px] py-[8px] text-[14px] font-medium leading-[20px]"
+          >
+            Book a call
           </Button>
 
           {/* mobile menu */}

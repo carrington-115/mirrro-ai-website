@@ -1,32 +1,44 @@
-import { Button, JoinTeam } from "@/components";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import workflowImage from "@/assets/images/workflow.png";
 
 export default function HeroComponent() {
   return (
     <>
-      <section className="container relative w-full mt-[110px] md:mt-[175px] lg:mt-[170px] px-[var(--spacing-16)] gap-[var(--spacing-20)] lg:gap-[var(--spacing-64)] flex flex-col items-center">
-        <div className="flex flex-col items-center">
-          <JoinTeam />
-          <h1 className="lg:hidden text-[40px]/[50px] md:text-[55px]/[70px] lg:text-[75px]/[90px]  text-center font-bold">
-            Unified AI for all Revenue Operations
+      <section className="container relative w-full pt-[110px] md:pt-[175px] lg:pt-[200px] px-[var(--spacing-16)] gap-[var(--spacing-20)] lg:gap-[var(--spacing-64)] lg:pb-[var(--spacing-64)] flex flex-col items-left lg:items-center bg-[var(--accent-0)] overflow-hidden pb-[var(--spacing-80)]">
+        <div className="w-[95%] lg:w-auto flex flex-col items-left lg:items-center max-w-[804px] gap-[var(--spacing-20)] lg:gap-[var(--spacing-12)]">
+          <h1 className="text-[36px]/[40px] md:text-[55px]/[70px] lg:text-[48px]/[48px] text-left lg:text-center font-bold tracking-[-1.5px] text-[var(--general-foreground,#0a0a0a)]">
+            Supercharge your business with Agentic workflows
           </h1>
-          <h1 className="hidden lg:block lg:text-[40px]/[50px] lg:text-[75px]/[90px]  lg:text-center lg:font-bold">
-            Unified AI for all Revenue <br />
-            Operations
-          </h1>
-          <p className="text-center text-[17px] md:w-[85%] lg:w-[80%] mt-[var(--spacing-6)] lg:text-[23px]/[35px] text-[var(--colors-black-40)] dark:text-[var(--colors-black-20)]">
-            mirrro gives your teams one unified <strong>superagent</strong> with{" "}
-            <strong>full memory</strong>, <strong>realtime visibility</strong>,
-            and <strong>total control</strong> so every interaction feels
-            consistent and human.
+          <p className="text-left lg:text-center text-[var(--paragraph-mini-font-size)] lg:text-[18px]/[27px] text-[var(--unofficial-ghost-foreground,#404040)] max-w-[678px]">
+            Empower every department with agents that think, adapt, and execute
+            workflows intelligently, eliminating manual work and unlocking
+            serious efficiency gains.
           </p>
+          <div className="w-fit flex flex-col items-left gap-[var(--spacing-20)] lg:flex-row lg:items-center lg:justify-center lg:gap-[var(--spacing-12)]">
+            <Button
+              variant="default"
+              className="rounded-full px-[12px] py-[6px] text-base font-medium leading-[20px]"
+              size="lg"
+            >
+              Book a call
+            </Button>
+            <Button
+              variant="outline"
+              className="rounded-full px-[12px] py-[6px] text-base font-medium leading-[20px] bg-[rgba(255,255,255,0.1)] border-[#d4d4d4] text-[#0a0a0a]"
+              size="lg"
+            >
+              Signup for updates
+            </Button>
+          </div>
         </div>
-        <div className="w-full flex flex-wrap items-center justify-center gap-[var(--spacing-20)] lg:gap-[var(--spacing-64)]">
-          <Button variant="filled" round="corner">
-            Talk to founders
-          </Button>
-          <Button variant="outlined" round="corner">
-            Signup for updates
-          </Button>
+
+        <div className="mt-[24px] w-[1000px] lg:w-full lg:max-w-[1188px] rounded-lg border-5 border-[var(--border)] shadow-sm">
+          <Image
+            src={workflowImage}
+            alt="Agentic workflows dashboard image"
+            className="w-full h-auto object-cover rounded-lg"
+          />
         </div>
       </section>
     </>

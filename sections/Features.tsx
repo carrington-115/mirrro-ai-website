@@ -1,34 +1,52 @@
-import { Feature } from "@/components";
-import { darkFeatureData, featureData } from "@/lib/data";
-import Integrations from "./Integrations";
+import FeatureCard from "@/components/FeatureCard";
+import channelsImg from "@/assets/images/channels/channels.png";
+import teamOrganizationImg from "@/assets/images/channels/team-feature.png";
+import integrationsImg from "@/assets/images/channels/integrations-feature.png";
 
 export default function Features() {
   return (
     <section
       id="features"
-      className="lg:w-[100%] lg:flex lg:flex-col lg:justify-center"
+      className="lg:w-[100%] lg:flex lg:flex-col lg:justify-center items-center overflow-x-clip mt-[var(--spacing-32)] px-[var(--spacing-16)] lg:px-[var(--spacing-120)] pb-[var(--spacing-16)]"
     >
-      <div className="mx-auto lg:w-[85%] mt-[var(--spacing-64)] flex flex-col pb-[40px] items-center gap-[var(--spacing-20)] px-[var(--spacing-16)] md:px-[var(--spacing-32)] md:py-[50px] md:bg-[var(--colors-black-5)]/50 dark:md:bg-[var(--colors-black-80)]/50 lg:pt-[var(--spacing-80)] lg:px-[0px]">
-        <h2 className="text-4xl font-bold text-center">
-          Better RevOps, More Revenue
-        </h2>
-        {/* <div className="lg:hidden md:hidden">
-          <Feature {...featureData[0]} />
-        </div> */}
+      <div className="w-full flex flex-col gap-[16px] mt-[var(--spacing-64)] max-w-[1188px] mx-auto">
+        {/* Top Row - Vertical split */}
+        <div className="flex flex-col lg:flex-row gap-[16px] w-full">
+          {/* Multi-channel communication */}
+          <FeatureCard
+            title="Multi-channel communication"
+            description="Reach and serve customers instantly across phone, SMS, WhatsApp, Telegram, Messenger and more — with one consistent, context-aware agent."
+            imageSrc={channelsImg}
+            layout="vertical"
+            containerClassName="bg-[#eef2ff] border-[#c7d2fe] lg:w-[45%] h-auto"
+            imageContainerClassName="w-full border-transparent border-0 bg-transparent flex justify-center items-center p-0 !border-none"
+            imageClassName="lg:w-full w-[90%] h-auto object-contain"
+          />
 
-        <div className="grid grid-cols-1 dark:hidden md:grid lg:grid md:grid-cols-2 lg:grid-cols-4 gap-x-[var(--spacing-20)] lg:gap-y-0 lg:gap-x-0 gap-y-[var(--spacing-32)] mt-[var(--spacing-32)] lg:mx-auto justify-start">
-          {featureData.map((feature) => (
-            <Feature key={feature.title} {...feature} />
-          ))}
+          {/* Team organization and management */}
+          <FeatureCard
+            title="Team organization and management"
+            description="See who has access to what, manage roles and permissions in one place, and keep every department perfectly aligned — even as your company grows."
+            imageSrc={teamOrganizationImg}
+            layout="vertical"
+            containerClassName="bg-[#fafafa] border-[#e5e5e5] lg:w-[60%] h-auto items-end pt-[var(--spacing-32)] pl-[var(--spacing-32)] pr-[var(--spacing-32)]"
+            contentClassName="self-start"
+            imageContainerClassName="border-[#e5e5e5] border-[3px] border-b-0 rounded-b-none lg:w-[80%] ml-auto"
+            imageClassName="w-full h-auto object-cover object-left-top"
+          />
         </div>
 
-        <div className="hidden md:hidden lg:hidden dark:grid sm:dark:grid-cols-1 md:dark:grid lg:dark:grid md:dark:grid-cols-2 lg:dark:grid-cols-4 gap-x-[var(--spacing-20)] lg:gap-y-0 lg:gap-x-0 gap-y-[var(--spacing-32)] mt-[var(--spacing-32)] lg:mx-auto justify-start">
-          {darkFeatureData.map((feature) => (
-            <Feature key={feature.title} {...feature} />
-          ))}
-        </div>
+        {/* Bottom Row - Horizontal */}
+        <FeatureCard
+          title="Integrations"
+          description="Connect every tool you already use — CRMs, calendars, payment systems, messaging apps — and let mirrroverse turn your existing software into a unified intelligent brain."
+          imageSrc={integrationsImg}
+          layout="horizontal"
+          containerClassName="bg-[#f0f9ff] border-[#bae6fd]"
+          imageContainerClassName="lg:w-[50%] !border-none flex items-start justify-center"
+          imageClassName="w-full lg:w-[80%] h-auto object-contain"
+        />
       </div>
-      <Integrations />
     </section>
   );
 }
