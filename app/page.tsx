@@ -5,6 +5,7 @@ import {
   Hero,
   Product,
   Updates,
+  FAQ,
 } from "@/sections";
 
 export default function Home() {
@@ -14,8 +15,9 @@ export default function Home() {
       <Product />
       <Communication />
       <Features />
-      {/* <Updates /> */}
-      {/* <Footer /> */}
+      <Updates />
+      <FAQ />
+      <Footer />
     </div>
   );
 }

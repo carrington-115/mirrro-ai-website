@@ -5,6 +5,7 @@ import ComItem from "./CommunicationComponent";
 import Feature from "./FeaturesComponent";
 import UpdatesInput from "./UpdatesInput";
 import AlternatingFeature from "./AlternatingFeature";
+import IllustrationStepComponent from "./IllustrationStepComponent";
 
 export {
   NavBar,
@@ -14,4 +15,5 @@ export {
   UpdatesInput,
   FeatureCard,
   AlternatingFeature,
+  IllustrationStepComponent,
 };

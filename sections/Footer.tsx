@@ -1,4 +1,4 @@
-import { Button } from "@/components";
+import { Button } from "@/components/ui/button";
 import NavLink from "@/components/NavLink";
 import Image from "next/image";
 import lightFooterLogo from "@/assets/images/light-logo.svg";
