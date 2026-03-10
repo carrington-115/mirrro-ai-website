@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { navLinks } from "@/lib/data";
-import { Button } from ".";
+import { Button } from "./ui/button";
 import { twMerge } from "tailwind-merge";
 import { mobileLinksTypes } from "@/lib/types";
 
@@ -14,7 +14,7 @@ export default function MobileLinks({
       <div
         className={twMerge(
           "bottom-0 left-0 right-0 top-[8%] mt-[var(--spacing-20)] w-full h-[100%] gap-[40%] hidden flex-col lg:hidden",
-          isOpen && "flex"
+          isOpen && "flex",
         )}
         style={{
           transition: "height 1s cubic-bezier(0.4,0,0.2,1)",
@@ -35,14 +35,6 @@ export default function MobileLinks({
             ))}
           </ul>
         </nav>
-        <div className="flex flex-wrap gap-5 w-full items-center justify-between">
-          <Button round="corner" className="cursor-pointer" variant="filled">
-            Talk to founders
-          </Button>
-          <Button variant="outlined" className="cursor-pointer " round="corner">
-            Sign up to updates
-          </Button>
-        </div>
       </div>
     </>
   );

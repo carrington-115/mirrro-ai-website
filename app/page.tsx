@@ -9,13 +9,13 @@ import {
 
 export default function Home() {
   return (
-    <div className="container mx-auto pt-[100px]">
+    <div className="container mx-auto">
       <Hero />
       <Product />
-      <Communication />
+      {/* <Communication />
       <Features />
       <Updates />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
