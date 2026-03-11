@@ -1,11 +1,30 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import NavLink from "@/components/NavLink";
 import Image from "next/image";
 import lightFooterLogo from "@/assets/images/light-logo.svg";
 import darkFooterLogo from "@/assets/images/Dark mode.svg";
 import { linkGroups } from "@/lib/data";
+import { emailSchema } from "@/lib/schema";
+import z from "zod";
+import { useForm, Controller } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Field, FieldDescription, FieldLegend } from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
 
 export default function Footer() {
+  const updatesForm = useForm<z.infer<typeof emailSchema>>({
+    resolver: zodResolver(emailSchema),
+    defaultValues: {
+      email: "",
+    },
+  });
+
+  const onSubmit = (data: z.infer<typeof emailSchema>) => {
+    console.log("Hello world");
+  };
+
   return (
     <footer className="w-full flex justify-center py-[var(--spacing-64)] md:py-[87px] px-[var(--spacing-16)] lg:px-[161px] bg-[var(--unofficial-accent-0,#fafafa)] border-t border-[var(--border,#e5e5e5)]">
       <div className="w-full max-w-[1440px] flex flex-col md:flex-row justify-between items-start gap-[var(--spacing-32)] md:gap-0">
@@ -47,22 +66,37 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-[6px] items-start w-full md:w-auto mt-[var(--spacing-16)] md:mt-0">
-          <p className="font-normal text-sm leading-[20px] text-[var(--colors-black-90,#0d0d0d)]">
-            Subscribe for updates
-          </p>
-          <div className="flex flex-row items-center gap-[8px] w-full md:w-[384px]">
-            <input
-              type="email"
-              placeholder="Email"
-              className="flex-1 bg-white border border-[#cbd5e1] rounded-[6px] py-[8px] px-[12px] font-normal text-sm leading-[20px] text-[var(--general-secondary-foreground,#171717)] placeholder:text-[color:var(--colors-black-10,#d9d9d9)] outline-none focus:border-[var(--unofficial-foreground-alt,#404040)] transition-colors"
+          <form onSubmit={updatesForm.handleSubmit(onSubmit)}>
+            <Controller
+              name="email"
+              control={updatesForm.control}
+              render={({ field }) => (
+                <Field>
+                  <FieldLegend className="font-normal text-sm leading-[20px] text-[var(--colors-black-90,#0d0d0d)]">
+                    Subscribe for updates
+                  </FieldLegend>
+                  <div className="flex flex-row items-center gap-[8px] w-full md:w-[384px]">
+                    <Input
+                      type="email"
+                      placeholder="Email"
+                      {...field}
+                      className="flex-1 bg-white border border-[#cbd5e1] rounded-[6px] py-[8px] px-[12px] font-normal text-sm leading-[20px] text-[var(--general-secondary-foreground,#171717)] placeholder:text-[color:var(--colors-black-10,#d9d9d9)] outline-none focus:border-[var(--unofficial-foreground-alt,#404040)] transition-colors"
+                    />
+                    <Button
+                      variant="default"
+                      type="submit"
+                      className="px-[16px] py-[8px]"
+                    >
+                      Subscribe
+                    </Button>
+                  </div>
+                  <FieldDescription className="font-normal text-sm leading-[20px] text-[color:var(--colors-black-30,#8c8c8c)]">
+                    Enter your email address
+                  </FieldDescription>
+                </Field>
+              )}
             />
-            <Button variant="default" className="px-[16px] py-[8px]">
-              Subscribe
-            </Button>
-          </div>
-          <p className="font-normal text-sm leading-[20px] text-[color:var(--colors-black-30,#8c8c8c)]">
-            Enter your email address
-          </p>
+          </form>
         </div>
       </div>
     </footer>
