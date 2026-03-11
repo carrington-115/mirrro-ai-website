@@ -46,7 +46,7 @@ const faqs = [
 export default function FAQ() {
   return (
     <section
-      id="faq"
+      id="faqs"
       className="mx-auto mt-[var(--spacing-160)] flex flex-col lg:flex-row w-full px-[var(--spacing-16)] lg:px-[var(--spacing-120)] gap-[var(--spacing-64)] lg:gap-[var(--spacing-120)] max-w-[1440px] items-start"
     >
       <div className="flex flex-col gap-[var(--spacing-20)] lg:gap-[var(--spacing-12)] w-full lg:w-[50%]">

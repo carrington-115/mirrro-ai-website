@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import workflowImage from "@/assets/images/workflow.png";
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
+import { twMerge } from "tailwind-merge";
 
 export default function HeroComponent() {
   return (
@@ -16,20 +19,30 @@ export default function HeroComponent() {
             serious efficiency gains.
           </p>
           <div className="w-fit flex flex-col items-left gap-[var(--spacing-20)] lg:flex-row lg:items-center lg:justify-center lg:gap-[var(--spacing-12)]">
-            <Button
-              variant="default"
-              className="rounded-full px-[12px] py-[6px] text-base font-medium leading-[20px]"
-              size="lg"
+            <Link
+              href="https://calendly.com/mirrro-ai/30min"
+              className={twMerge(
+                buttonVariants({
+                  variant: "default",
+                  size: "lg",
+                }),
+                "rounded-full px-[12px] py-[6px] text-base font-medium leading-[20px]",
+              )}
             >
               Book a call
-            </Button>
-            <Button
-              variant="outline"
-              className="rounded-full px-[12px] py-[6px] text-base font-medium leading-[20px] bg-[rgba(255,255,255,0.1)] border-[#d4d4d4] text-[#0a0a0a]"
-              size="lg"
+            </Link>
+            <Link
+              href="#features"
+              className={twMerge(
+                buttonVariants({
+                  variant: "outline",
+                  size: "lg",
+                }),
+                "rounded-full px-[12px] py-[6px] text-base font-medium leading-[20px]",
+              )}
             >
-              Signup for updates
-            </Button>
+              Discover features
+            </Link>
           </div>
         </div>
 

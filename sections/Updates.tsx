@@ -10,7 +10,7 @@ import deployImg from "@/assets/images/deploy/deploy-step.svg";
 export default function Updates() {
   return (
     <section
-      id="how it works"
+      id="how-it-works"
       className="mx-auto mt-[var(--spacing-32)] flex flex-col items-center w-full px-[var(--spacing-16)] lg:px-[var(--spacing-120)] gap-[var(--spacing-64)] lg:gap-[var(--spacing-120)] max-w-[1440px]"
     >
       <div className="flex flex-col gap-[var(--spacing-32)] w-full items-center">

@@ -12,8 +12,11 @@ import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Field, FieldDescription, FieldLegend } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { useTransition } from "react";
+import { Loader2 } from "lucide-react";
 
 export default function Footer() {
+  const [pending, startTransition] = useTransition();
   const updatesForm = useForm<z.infer<typeof emailSchema>>({
     resolver: zodResolver(emailSchema),
     defaultValues: {
@@ -22,7 +25,7 @@ export default function Footer() {
   });
 
   const onSubmit = (data: z.infer<typeof emailSchema>) => {
-    console.log("Hello world");
+    startTransition(() => console.log("Hello world", data));
   };
 
   return (
@@ -65,16 +68,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-[6px] items-start w-full md:w-auto mt-[var(--spacing-16)] md:mt-0">
+        {/* <div className="flex flex-col gap-[6px] items-start w-full md:w-auto mt-[var(--spacing-16)] md:mt-0">
           <form onSubmit={updatesForm.handleSubmit(onSubmit)}>
             <Controller
               name="email"
               control={updatesForm.control}
               render={({ field }) => (
                 <Field>
-                  <FieldLegend className="font-normal text-sm leading-[20px] text-[var(--colors-black-90,#0d0d0d)]">
+                  <p className="font-normal text-sm leading-[20px] text-[var(--colors-black-90,#0d0d0d)]">
                     Subscribe for updates
-                  </FieldLegend>
+                  </p>
                   <div className="flex flex-row items-center gap-[8px] w-full md:w-[384px]">
                     <Input
                       type="email"
@@ -87,7 +90,13 @@ export default function Footer() {
                       type="submit"
                       className="px-[16px] py-[8px]"
                     >
-                      Subscribe
+                      {pending ? (
+                        <>
+                          <Loader2 className="animate-spin" /> Signing up...
+                        </>
+                      ) : (
+                        "Subscribe"
+                      )}
                     </Button>
                   </div>
                   <FieldDescription className="font-normal text-sm leading-[20px] text-[color:var(--colors-black-30,#8c8c8c)]">
@@ -97,7 +106,7 @@ export default function Footer() {
               )}
             />
           </form>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
