@@ -1,6 +1,5 @@
 "use client";
 
-import UpdatesInput from "@/components/UpdatesInput";
 import IllustrationStepComponent from "@/components/IllustrationStepComponent";
 import workflowImg from "@/assets/images/deploy/workflow-step.svg";
 import toolsImg from "@/assets/images/deploy/tools-step.svg";

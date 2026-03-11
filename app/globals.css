@@ -453,5 +453,10 @@
   }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
