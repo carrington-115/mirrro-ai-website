@@ -9,7 +9,8 @@ import NavLink from "./NavLink";
 import MenuIcon from "./MenuIcon";
 import { navLinks } from "@/lib/data";
 import MobileLinks from "./MobileLinks";
-import { Button } from "./ui/button";
+import { twMerge } from "tailwind-merge";
+import { buttonVariants } from "./ui/button";
 
 export default function NavBar() {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
@@ -58,12 +59,21 @@ export default function NavBar() {
               ))}
             </ul>
           </nav>
-          <Button
-            variant="default"
-            className="mr-[12px] hidden lg:inline-flex rounded-full h-[36px] px-[16px] py-[8px] text-[14px] font-medium leading-[20px]"
+          <Link
+            href="https://cal.com/frumark/mirrroagents"
+            className={twMerge(
+              buttonVariants({
+                variant: "default",
+                size: "default",
+                className: "w-fit",
+              }),
+              "text-[14px] font-medium leading-[20px]",
+            )}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Book a call
-          </Button>
+          </Link>
 
           {/* mobile menu */}
           <MenuIcon

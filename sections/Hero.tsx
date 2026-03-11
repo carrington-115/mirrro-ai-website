@@ -20,7 +20,7 @@ export default function HeroComponent() {
           </p>
           <div className="w-fit flex flex-col items-left gap-[var(--spacing-20)] lg:flex-row lg:items-center lg:justify-center lg:gap-[var(--spacing-12)]">
             <Link
-              href="https://calendly.com/mirrro-ai/30min"
+              href="https://cal.com/frumark/mirrroagents"
               className={twMerge(
                 buttonVariants({
                   variant: "default",
@@ -28,6 +28,8 @@ export default function HeroComponent() {
                 }),
                 "rounded-full px-[12px] py-[6px] text-base font-medium leading-[20px]",
               )}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Book a call
             </Link>

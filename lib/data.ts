@@ -242,7 +242,6 @@ export const linkGroups: linkGroupTypes = {
   legalGroup: [
     { title: "Terms and conditions", link: usefulLinks.privacyPolicy },
     { title: "Privacy policy", link: usefulLinks.privacyPolicy },
-    { title: "FAQs", link: usefulLinks.FAQs },
-    { title: "Blog", link: "#" },
+    { title: "FAQs", link: "#faqs" },
   ],
 };
