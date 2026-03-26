@@ -67,7 +67,7 @@ export default function NavBar() {
                 size: "default",
                 className: "w-fit",
               }),
-              "text-[14px] font-medium leading-[20px]",
+              "hidden lg:flex text-[14px] font-medium leading-[20px]",
             )}
             target="_blank"
             rel="noopener noreferrer"
